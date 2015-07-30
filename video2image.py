@@ -21,7 +21,6 @@ def video2frames(path, output=None, skip=1, mirror=False):
         success, frame = video_object.read()
         if success:
             if index % skip == 0:
-                print last_mirrored
                 if mirror and last_mirrored:
                     frame = _mirror_image(frame)
                 last_mirrored = not last_mirrored
