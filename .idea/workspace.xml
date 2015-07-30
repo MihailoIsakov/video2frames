@@ -34,10 +34,10 @@
       <file leaf-file-name="video2image.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/video2image.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.48803827">
-              <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.37320575">
+              <caret line="29" column="58" selection-start-line="29" selection-start-column="58" selection-end-line="29" selection-end-column="58" />
               <folding>
-                <element signature="e#49#59#0" expanded="true" />
+                <element signature="e#49#58#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -378,10 +378,10 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/video2image.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.48803827">
-          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.37320575">
+          <caret line="29" column="58" selection-start-line="29" selection-start-column="58" selection-end-line="29" selection-end-column="58" />
           <folding>
-            <element signature="e#49#59#0" expanded="true" />
+            <element signature="e#49#58#0" expanded="true" />
           </folding>
         </state>
       </provider>

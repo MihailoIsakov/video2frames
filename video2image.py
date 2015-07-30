@@ -1,8 +1,10 @@
 #! /usr/bin/env python
 __author__ = 'zieghailo'
 
+import os
 import cv2
 import numpy as np
+from datetime import datetime
 
 def video2frames(path, output=None, skip=1, mirror=False):
     video_object = cv2.VideoCapture(path)
@@ -25,7 +27,7 @@ def video2frames(path, output=None, skip=1, mirror=False):
                     frame = _mirror_image(frame)
                 last_mirrored = not last_mirrored
 
-                cv2.imwrite(output + "_" + str(index) + ".jpg", frame)  # assumes that the extension is three letters long
+                cv2.imwrite(output + "_" + str(datetime.now()) + ".jpg", frame)  # assumes that the extension is three letters long
         else:
             break
 
@@ -50,7 +52,15 @@ def main():
     if args.mirror is None:
         args.mirror = False
 
-    video2frames(args.filename, output=args.output, skip=int(args.skip), mirror=bool(args.mirror))
+    # In case the filename points to a directory
+    if os.path.isdir(args.filename):
+        files = [os.path.join(args.filename, f) for f in os.listdir(args.filename) if os.path.isfile(os.path.join(args.filename, f))]
+        for video in files:
+            video2frames(video, output=args.output, skip=int(args.skip), mirror=bool(args.mirror))
+
+    else:
+        video2frames(args.filename, output=args.output, skip=int(args.skip), mirror=bool(args.mirror))
+
 
 if __name__ == "__main__":
     main()
